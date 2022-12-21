@@ -1,0 +1,94 @@
+ 
+ <!--right menu-->
+ <ion-menu contentId="main-content" side="end">
+  <ion-header>
+    <ion-toolbar>
+      <ion-img src="../../assets/img/logo.jpeg" alt="Damipa"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="light">
+    <ion-button id="menu" color="brown" expand="block" fill="solid" [routerLink]="['/menu']">Menu</ion-button>
+    <ion-button id="Reservar" color="brown" expand="block" fill="solid" [routerLink]="['/make-appointment']">Reservar</ion-button>
+  </ion-content>
+    <ion-menu-toggle>
+      <ion-button id="Salir" color="brown" expand="block" fill="solid" [routerLink]="['/home']">Salir</ion-button>
+    </ion-menu-toggle>
+</ion-menu>
+<div class="ion-page" id="main-content">
+
+
+<!--Main menu-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button slot="start" fill="clear" size="large" shape="round" [routerLink]="['/user']">
+      <ion-icon name="person-circle" color="light"></ion-icon>
+    </ion-button>
+    <ion-menu-button slot="end" color="light"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list lines="full">
+      <div class="contenedor">
+        <div class="container">
+          <img class="mesa" src="../../assets/img/mesa.png" alt="mesa">
+          <img class="numero" src="../../assets/img/2.png" alt="numero 2">
+        </div>
+      
+        <div class="container">
+          <img class="mesa" src="../../assets/img/mesa.png" alt="mesa">
+          <img class="numero" src="../../assets/img/4.png" alt="numero 4">
+        </div>
+      
+        <div class="container">
+          <img class="mesa" src="../../assets/img/mesa.png" alt="mesa">
+          <img class="numero" src="../../assets/img/6.png" alt="numero 6">
+        </div>
+      </div>
+
+      <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-item color="brown">
+        <ion-label position="floating">Nombre:</ion-label>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input formControlName="email" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Tefefono:</ion-label>
+        <ion-input formControlName="telefono" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item class="contenedor">
+        <ion-label position="floating">Fecha:</ion-label>
+        <ion-datetime type="string" formControlName="fecha" presentation="date" required ></ion-datetime>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Hora:</ion-label>
+        <ion-input formControlName="hora" type="string" required></ion-input> 
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Cedula:</ion-label>
+        <ion-input formControlName="cedula" type="string" required></ion-input>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Cantidad de personas:</ion-label>
+        <ion-input formControlName="personas" type="string" required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button  color="light-brown" type="submit" (click)="presentAlert()" shape="full" expand="block">RESERVAR MESA</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Damipa",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

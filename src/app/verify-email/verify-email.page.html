@@ -1,0 +1,24 @@
+<!--Main menu-->
+<ion-header>
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<!--Main menu-->
+<ion-content color="brown">
+  <ion-title color="light">Verificar correo</ion-title>
+  <div class="user-image">
+    <img src="../../assets/img/user.png" alt="User">
+  </div>
+
+<ion-content color="brown">
+  <div class="contenedor">
+    <p> Por favor, verifique su correo electrónico haciendo clic en el enlace que le enviamos. </p>
+    <ion-grid>
+      <ion-row>
+        <ion-button type="submit" (click)="authService.SendVerificationMail()" color="light-brown">
+          Reenviar correo electrónico de verificación
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<!--Main menu-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button slot="start" fill="clear" size="large" shape="round">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-button>
+    <ion-menu-button slot="end" color="light"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--Main menu-->
+<ion-content color="brown">
+  <ion-title color="light">Registrarse</ion-title>
+  <div class="user-image">
+    <img src="../../assets/img/user.png" alt="User">
+  </div>
+  <div class="contenedor">
+    <form>
+      <ion-label >Usuario</ion-label>
+      <ion-item>
+        <ion-input class="usuario" type="text" #email required></ion-input>
+      </ion-item>
+    
+      <ion-label>Contraseña</ion-label>
+      <ion-item>
+        <ion-input class="contrasena" type="password" #password required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="signUp(email, password)" color="light-brown" fill="solid">Registrarse</ion-button>
+        </ion-col>
+      </ion-row>
+    
+      <ion-row>
+        <ion-col>
+          <ion-label class="label-registro" color="light">¿Tienes una cuenta?</ion-label>
+          <ion-button [routerLink]="['/login']" expand="block" color="light-brown">Iniciar sessión</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

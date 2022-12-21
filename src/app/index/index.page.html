@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Damipa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form" color="brown">
+  <div class="user-image">
+    <img src="../../assets/img/logo.jpeg" alt="logo">
+  </div>
+  <div class="contenedor">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-align-self-center">
+        <ion-button [routerLink]="['/registro']" color="light-brown">Registrarse</ion-button>
+        <span class="already"> ¿Tienes una cuenta?</span>
+        <ion-button [routerLink]="['/login']" color="light-brown">Iniciar session</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+</ion-content>

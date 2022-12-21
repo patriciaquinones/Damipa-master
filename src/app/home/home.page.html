@@ -1,0 +1,114 @@
+<ion-app>
+ <!--right menu-->
+ <ion-menu contentId="main-content" side="end">
+  <ion-header>
+    <ion-toolbar>
+      <ion-img src="../../assets/img/logo.jpeg" alt="Damipa"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="light">
+    <ion-button id="menu" color="brown" expand="block" fill="solid" [routerLink]="['/menu']">Menu</ion-button>
+    <ion-button id="Reservar" color="brown" expand="block" fill="solid" [routerLink]="['/make-appointment']">Reservar</ion-button>
+  </ion-content>
+    <ion-menu-toggle>
+      <ion-button id="Salir" color="brown" expand="block" fill="solid" [routerLink]="['/index']">Salir</ion-button>
+    </ion-menu-toggle>
+</ion-menu>
+<div class="ion-page" id="main-content">
+
+
+<!--Main menu-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button slot="start" fill="clear" size="large" shape="round" [routerLink]="['/user']">
+      <ion-icon name="person-circle" color="light"></ion-icon>
+    </ion-button>
+    <ion-menu-button slot="end" color="light"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Damipa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <img id="discount-img" src="../../assets/img/discount.png" alt="Damipa"/>
+    <ion-button id="menu" color="brown" expand="block" fill="solid" [routerLink]="['/menu']">Menu</ion-button>
+    <ion-button id="Reservar" color="brown" expand="block" fill="solid" [routerLink]="['/make-appointment']">Reservar</ion-button>
+  </div>
+
+  <section class="caracteristicas">
+    <div>
+      <h1 class="subtitulo">CARACTERISTICAS</h1>
+      <h3>Descuentos</h3>
+      <img src="../../assets/img/porcentage.png" alt="Porcentaje" />
+      <p>Descuentos al reservar a traves de la app.</p>
+    </div>
+    <div>
+      <h3>Sin tarjetas</h3>
+      <img src="../../assets/img/creditcard.png" alt="Tarjeta" />
+      <p>No requiere de pagos para reservar.</p>
+    </div>
+    <div>
+      <h3>Cancela ¡Gratis!</h3>
+      <img src="../../assets/img/cancel.png" alt="Cancelar" />
+      <p>Cancela en cualquier momento sin recargos.</p>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h1 class="subtitulo">CONTACTO</h1>
+    <capacitor-google-map #map></capacitor-google-map>
+    
+    <div class="box">
+      <h3>Direccion</h3>
+      <p>Calle 31 Plaza Bonaire, Santo Domingo, 10101</p>
+    </div>
+    <div class="box">
+      <h3>Correo</h3>
+      <a href="mailto:info@damipard.com">
+        <img src="../../assets/img/email.png" alt="Email" />
+        <p>info@damipard.com</p>
+      </a>
+    </div>
+    <div class="box">
+      <h3>Telefono</h3>
+
+      <div class="item">
+        <img src="../../assets/img/phone.png" alt="Telefono" />
+        <p>809-999-0001</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/mobile.png" alt="Celular" />
+        <p>809-999-0001</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/whatsapp.png" alt="Whatsapp" />
+        <p>829-992-8898</p>
+      </div>
+    </div>
+  </section>
+  
+  <ion-toolbar class="footer">
+    <ion-title>
+      <h2>DAMIPA</h2>
+    </ion-title>
+    <ul>
+      <a href="#"><li>Terms and Conditions</li></a>
+      <a href="#"><li>Privacy Policy</li></a>
+    </ul>
+    <h2>REDES SOCIALES</h2>
+    <div class="social">
+      <a href="#"><img src="../../assets/img/facebook.png" alt="Facebook"/></a>
+      <a href="#"><img src="../../assets/img/instagram.png" alt="Instagram"/></a>
+      <a href="#"><img src="../../assets/img/twitter.png" alt="Twitter"/></a>
+    </div>
+    <span>© 2021 DAMIPARD. All rights reserved.</span>
+  </ion-toolbar>
+  </ion-content>
+</div>
+</ion-app>
+

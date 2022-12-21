@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" size="large" shape="round">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-button>
+    <ion-title>
+      Actualización de reserva
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
+      <ion-item color="brown">
+        <ion-label position="floating">Nombre:</ion-label>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input formControlName="email" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Tefefono:</ion-label>
+        <ion-input formControlName="telefono" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item class="contenedor">
+        <ion-label position="floating">Fecha:</ion-label>
+        <ion-datetime type="string" formControlName="fecha" presentation="date" required ></ion-datetime>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Hora:</ion-label>
+        <ion-input formControlName="hora" type="string" required></ion-input> 
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Cedula:</ion-label>
+        <ion-input formControlName="cedula" type="string" required></ion-input>
+      </ion-item>
+
+      <ion-item color="brown">
+        <ion-label position="floating">Cantidad de personas:</ion-label>
+        <ion-input formControlName="personas" type="string" required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="light-brown" shape="full" expand="block">Actualizar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

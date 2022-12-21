@@ -1,0 +1,49 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+ion-title{
+  margin-top: 2rem;
+  margin-bottom:2rem;
+}
+
+ion-button:hover{
+  transform: scale(.9)
+}
+ion-toolbar {
+  --background: url("../../assets/img/index.jpg") center / 100% ;
+}
+
+ion-title {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.user-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.user-image img{
+  margin: 1rem;
+  width: 300px;
+}
+
+p{
+  margin-left: 1rem;
+}
+h2 {
+  font-size: 18px;
+}
+
+.item-note{
+  display: flex;
+  flex-direction: column;
+}
+
+ion-card-content{
+  width: 99%;
+}

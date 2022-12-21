@@ -1,0 +1,35 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  ion-title{
+    margin: 2rem;
+  }
+
+  ion-button:hover{
+    transform: scale(.9)
+  }
+  ion-toolbar {
+    --background: url("../../assets/img/index.jpg") center / 100% ;
+  }
+  
+  ion-title {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+  }
+  
+  .menu{
+    width: 100%;
+  }
+
+  ion-row{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+  }
+  
+  .plato{
+    width: 400px;
+    margin-top: 2rem;
+  }
